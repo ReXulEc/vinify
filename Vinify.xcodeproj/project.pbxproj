@@ -6,14 +6,64 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4C5665A5307422D80068D797 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5665A4307422D80068D797 /* WidgetKit.framework */; };
+		4C5665A7307422D80068D797 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5665A6307422D80068D797 /* SwiftUI.framework */; };
+		4C5665B6307422D90068D797 /* VinifyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4C5665A2307422D80068D797 /* VinifyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C5665B4307422D90068D797 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C566588307422910068D797 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C5665A1307422D80068D797;
+			remoteInfo = VinifyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C5665BB307422D90068D797 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				4C5665B6307422D90068D797 /* VinifyWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4C566590307422910068D797 /* Vinify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C5665A2307422D80068D797 /* VinifyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VinifyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C5665A4307422D80068D797 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4C5665A6307422D80068D797 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4C5665BD307423140068D797 /* VinifyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VinifyWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4C5665B7307422D90068D797 /* Exceptions for "VinifyWidget" folder in "VinifyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4C5665A1307422D80068D797 /* VinifyWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4C566592307422910068D797 /* Vinify */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Vinify;
+			sourceTree = "<group>";
+		};
+		4C5665A8307422D80068D797 /* VinifyWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4C5665B7307422D90068D797 /* Exceptions for "VinifyWidget" folder in "VinifyWidgetExtension" target */,
+			);
+			path = VinifyWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -24,13 +74,23 @@
 			files = (
 			);
 		};
+		4C56659F307422D80068D797 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				4C5665A7307422D80068D797 /* SwiftUI.framework in Frameworks */,
+				4C5665A5307422D80068D797 /* WidgetKit.framework in Frameworks */,
+			);
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		4C566587307422910068D797 = {
 			isa = PBXGroup;
 			children = (
+				4C5665BD307423140068D797 /* VinifyWidgetExtension.entitlements */,
 				4C566592307422910068D797 /* Vinify */,
+				4C5665A8307422D80068D797 /* VinifyWidget */,
+				4C5665A3307422D80068D797 /* Frameworks */,
 				4C566591307422910068D797 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -39,8 +99,18 @@
 			isa = PBXGroup;
 			children = (
 				4C566590307422910068D797 /* Vinify.app */,
+				4C5665A2307422D80068D797 /* VinifyWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4C5665A3307422D80068D797 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C5665A4307422D80068D797 /* WidgetKit.framework */,
+				4C5665A6307422D80068D797 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -53,8 +123,12 @@
 				4C56658C307422910068D797 /* Sources */,
 				4C56658D307422910068D797 /* Frameworks */,
 				4C56658E307422910068D797 /* Resources */,
+				4C5665BB307422D90068D797 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
+			);
+			dependencies = (
+				4C5665B5307422D90068D797 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				4C566592307422910068D797 /* Vinify */,
@@ -63,6 +137,24 @@
 			productName = Vinify;
 			productReference = 4C566590307422910068D797 /* Vinify.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4C5665A1307422D80068D797 /* VinifyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C5665B8307422D90068D797 /* Build configuration list for PBXNativeTarget "VinifyWidgetExtension" */;
+			buildPhases = (
+				4C56659E307422D80068D797 /* Sources */,
+				4C56659F307422D80068D797 /* Frameworks */,
+				4C5665A0307422D80068D797 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				4C5665A8307422D80068D797 /* VinifyWidget */,
+			);
+			name = VinifyWidgetExtension;
+			productName = VinifyWidgetExtension;
+			productReference = 4C5665A2307422D80068D797 /* VinifyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -75,6 +167,9 @@
 				LastUpgradeCheck = 2700;
 				TargetAttributes = {
 					4C56658F307422910068D797 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					4C5665A1307422D80068D797 = {
 						CreatedOnToolsVersion = 27.0;
 					};
 				};
@@ -94,12 +189,18 @@
 			projectRoot = "";
 			targets = (
 				4C56658F307422910068D797 /* Vinify */,
+				4C5665A1307422D80068D797 /* VinifyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4C56658E307422910068D797 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+		4C5665A0307422D80068D797 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -112,7 +213,20 @@
 			files = (
 			);
 		};
+		4C56659E307422D80068D797 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C5665B5307422D90068D797 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C5665A1307422D80068D797 /* VinifyWidgetExtension */;
+			targetProxy = 4C5665B4307422D90068D797 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4C566599307422910068D797 /* Debug configuration for PBXProject "Vinify" */ = {
@@ -240,15 +354,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Vinify/Vinify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M3A9YKZ496;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "spotify kullanak mı";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -272,15 +399,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Vinify/Vinify.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M3A9YKZ496;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "spotify kullanak mı";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,6 +433,76 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4C5665B9307422D90068D797 /* Debug configuration for PBXNativeTarget "VinifyWidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = VinifyWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M3A9YKZ496;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VinifyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VinifyWidget;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "spotify kullanak mı";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mert.Vinify.VinifyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4C5665BA307422D90068D797 /* Release configuration for PBXNativeTarget "VinifyWidgetExtension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = VinifyWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M3A9YKZ496;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VinifyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VinifyWidget;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "spotify kullanak mı";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 27.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mert.Vinify.VinifyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -315,6 +525,14 @@
 			buildConfigurations = (
 				4C56659C307422910068D797 /* Debug configuration for PBXNativeTarget "Vinify" */,
 				4C56659D307422910068D797 /* Release configuration for PBXNativeTarget "Vinify" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		4C5665B8307422D90068D797 /* Build configuration list for PBXNativeTarget "VinifyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C5665B9307422D90068D797 /* Debug configuration for PBXNativeTarget "VinifyWidgetExtension" */,
+				4C5665BA307422D90068D797 /* Release configuration for PBXNativeTarget "VinifyWidgetExtension" */,
 			);
 			defaultConfigurationName = Release;
 		};
